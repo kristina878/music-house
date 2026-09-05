@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                                                                        <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -425,6 +425,369 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
         if(target){event.preventDefault();target.scrollIntoView({behavior:"smooth"});}
     });
 });
+    [05.09.2026 23:31] Кристина: // ===== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА =====
+
+const translations = {
+    uz: {
+        "Главная": "Bosh sahifa",
+        "Направления": "Yo‘nalishlar",
+        "О студии": "Studiya haqida",
+        "Преподаватель": "O‘qituvchi",
+        "Бонусы": "Bonuslar",
+        "Контакты": "Aloqa",
+        "Записаться": "Yozilish",
+
+        "МУЗЫКАЛЬНАЯ СТУДИЯ": "MUSIQA STUDIYASI",
+        "Музыка начинается с первого шага": "Musiqa birinchi qadamdan boshlanadi",
+        "Научись играть. Выражай себя. Вдохновляй!": "Chalishni o‘rganing. O‘zingizni ifoda eting. Ilhomlaning!",
+        "Индивидуальные занятия для детей и взрослых.": "Bolalar va kattalar uchun individual mashg‘ulotlar.",
+        "В студии и ОНЛАЙН": "Studiya va ONLAYN",
+        "— независимо от возраста и уровня подготовки.": "— yosh va tayyorgarlik darajasidan qat’i nazar.",
+        "Записаться на занятие": "Mashg‘ulotga yozilish",
+        "Узнать подробнее": "Batafsil ma’lumot",
+
+        "Индивидуальный": "Shaxsiy",
+        "подход": "yondashuv",
+        "Удобное": "Qulay",
+        "расписание": "jadval",
+        "Дружеская": "Do‘stona",
+        "атмосфера": "muhit",
+
+        "НАПРАВЛЕНИЯ ОБУЧЕНИЯ": "TA’LIM YO‘NALISHLARI",
+        "Выберите свой инструмент": "O‘zingizga mos cholg‘uni tanlang",
+        "Начните свой путь в музыке в комфортном темпе.": "Musiqadagi yo‘lingizni qulay sur’atda boshlang.",
+
+        "Фортепиано": "Fortepiano",
+        "Акустическая гитара": "Akustik gitara",
+        "Электрогитара": "Elektr gitara",
+        "Бас-гитара": "Bas gitara",
+        "Ударные": "Barabanlar",
+        "Вокал": "Vokal",
+
+        "Индивидуальные занятия для начинающих и продолжающих. Осваиваем основы игры, технику, ритм и музыкальный слух.":
+        "Boshlovchilar va davom etayotgan o‘quvchilar uchun individual mashg‘ulotlar. O‘yin asoslari, texnika, ritm va musiqiy eshitishni o‘rganamiz.",
+
+        "Аккорды, бой, переборы и любимые песни. Подходит как для начинающих, так и для продолжающих.":
+        "Akkordlar, ritm, arpeggio va sevimli qo‘shiqlar. Boshlovchilar va davom etayotgan o‘quvchilar uchun mos.",
+
+        "Основы игры, риффы, аккорды, соло и простые техники импровизации.":
+        "O‘yin asoslari, rifflar, akkordlar, solo va oddiy improvizatsiya usullari.",
+
+        "Основы игры, ритм, техника и понимание роли бас-гитары в музыкальной композиции.":
+        "O‘yin asoslari, ritm, texnika va musiqa kompozitsiyasida bas gitaraning rolini tushunish.",
+
+        "Развиваем чувство ритма, координацию и постепенно осваиваем основные техники игры.":
+        "Ritm hissi va koordinatsiyani rivojlantiramiz hamda asosiy o‘yin usullarini bosqichma-bosqich o‘rganamiz.",
+
+        "Работаем над голосом, дыханием, музыкальным слухом и уверенностью при исполнении.":
+        "Ovoz, nafas, musiqiy eshitish va ijrodagi ishonch ustida ishlaymiz.",
+
+        "О СТУДИИ": "STUDIYA HAQIDA",
+        "Музыка в комфортном темпе": "Musiqa qulay sur’atda",
+
+        "Music House — небольшая музыкальная студия, где проходят индивидуальные занятия по игре на музыкальных инструментах.":
+        "Music House — musiqa asboblarini chalish bo‘yicha individual mashg‘ulotlar o‘tkaziladigan kichik musiqa studiyasi.",
+
+        "Преподаватель помогает ученикам освоить основы игры, разобраться с техникой и постепенно развивать свои музыкальные навыки.":
+        "O‘qituvchi o‘quvchilarga o‘yin asoslarini o‘zlashtirish, texnikani tushunish va musiqiy ko‘nikmalarini bosqichma-bosqich rivojlantirishga yordam beradi.",
+
+        "Занятия подходят как для начинающих, которые только знакомятся с инструментом, так и для тех, кто уже имеет небольшой опыт.":
+        "Mashg‘ulotlar cholg‘u asbobi bilan endigina tanishayotgan boshlovchilar hamda ozgina tajribaga ega o‘quvchilar uchun mos.",
+
+        "Программа подбирается с учётом уровня подготовки и целей ученика.":
+        "Dastur o‘quvchining tayyorgarlik darajasi va maqsadlarini hisobga olgan holda tanlanadi.",
+[05.09.2026 23:31] Кристина: "ВАШ ПРЕПОДАВАТЕЛЬ": "SIZNING O‘QITUVCHINGIZ",
+        "6 лет": "6 yil",
+        "опыта преподавания": "o‘qituvchilik tajribasi",
+        "✦ 6 лет преподавательского опыта": "✦ 6 yillik o‘qituvchilik tajribasi",
+
+        "Назар Владимирович проводит индивидуальные занятия для детей и взрослых.":
+        "Nazar Vladimirovich bolalar va kattalar uchun individual mashg‘ulotlar o‘tkazadi.",
+
+        "На занятиях можно освоить акустическую и электрогитару, бас-гитару, фортепиано и ударные инструменты, а также заниматься вокалом.":
+        "Mashg‘ulotlarda akustik va elektr gitara, bas gitara, fortepiano, barabanlarni o‘rganish, shuningdek vokal bilan shug‘ullanish mumkin.",
+
+        "Программа занятий подбирается с учётом возраста, уровня подготовки и целей ученика. Основной акцент — на понятной практике, постепенном развитии навыков и комфортном процессе обучения.":
+        "Mashg‘ulot dasturi o‘quvchining yoshi, tayyorgarlik darajasi va maqsadlarini hisobga olgan holda tanlanadi. Asosiy e’tibor tushunarli amaliyot, ko‘nikmalarni bosqichma-bosqich rivojlantirish va qulay ta’lim jarayoniga qaratiladi.",
+
+        "Гитара": "Gitara",
+        "Бас-гитара": "Bas gitara",
+        "Фортепиано": "Fortepiano",
+
+        "ДЛЯ НОВЫХ УЧЕНИКОВ": "YANGI O‘QUVCHILAR UCHUN",
+        "Бонусы для новых учеников": "Yangi o‘quvchilar uchun bonuslar",
+        "Начать знакомство с музыкой стало ещё приятнее.": "Musiqa bilan tanishishni boshlash yanada yoqimli bo‘ldi.",
+        "Скидка на первое занятие": "Birinchi mashg‘ulotga chegirma",
+        "Бесплатное пробное занятие": "Bepul sinov mashg‘uloti",
+        "Подарки и полезные материалы": "Sovg‘alar va foydali materiallar",
+        "Записаться на пробное занятие": "Sinov mashg‘ulotiga yozilish",
+
+        "ПРОЦЕСС ОБУЧЕНИЯ": "TA’LIM JARAYONI",
+        "Как проходят занятия": "Mashg‘ulotlar qanday o‘tadi",
+        "Знакомство": "Tanishuv",
+        "Определяем уровень подготовки и обсуждаем цели обучения.": "Tayyorgarlik darajasini aniqlaymiz va ta’lim maqsadlarini muhokama qilamiz.",
+        "Практика": "Amaliyot",
+        "Знакомимся с инструментом и постепенно осваиваем необходимые приёмы игры.": "Cholg‘u asbobi bilan tanishamiz va kerakli o‘yin usullarini bosqichma-bosqich o‘rganamiz.",
+        "Развитие": "Rivojlanish",
+        "Закрепляем полученные навыки и постепенно усложняем программу занятий.": "Olingan ko‘nikmalarni mustahkamlaymiz va mashg‘ulot dasturini asta-sekin murakkablashtiramiz.",
+
+        "ЗАПИСЬ": "YOZILISH",
+        "Начните свой путь в музыке": "Musiqadagi yo‘lingizni boshlang",
+        "Оставьте заявку, и мы свяжемся с вами, чтобы ответить на вопросы и подобрать удобное время занятий.":
+        "Ariza qoldiring, biz siz bilan bog‘lanib, savollaringizga javob beramiz va mashg‘ulotlar uchun qulay vaqtni tanlaymiz.",
+
+        "Ваше имя": "Ismingiz",
+        "Номер телефона": "Telefon raqamingiz",
+        "Выберите направление": "Yo‘nalishni tanlang",
+        "Комментарий": "Izoh",
+        "Отправить заявку": "Arizani yuborish",
+
+        "КОНТАКТЫ": "ALOQA",
+        "Как нас найти": "Bizni qanday topish mumkin",
+        "Телефон": "Telefon",
+        "Адрес": "Manzil",
+        "Ташкент": "Toshkent",
+        "Юнусабадский район": "Yunusobod tumani",
+        "ул. Осиё,": "Osiyo ko‘chasi,",
+        "Позвонить": "Qo‘ng‘iroq qilish",
+
+        "Музыкальная студия": "Musiqa studiyasi",
+        "Индивидуальные занятия по игре на музыкальных инструментах":
+        "Musiqa asboblarini chalish bo‘yicha individual mashg‘ulotlar"
+    },
+
+    en: {
+        "Главная": "Home",
+        "Направления": "Directions",
+        "О студии": "About the studio",
+        "Преподаватель": "Teacher",
+        "Бонусы": "Bonuses",
+        "Контакты": "Contacts",
+        "Записаться": "Book a lesson",
+
+        "МУЗЫКАЛЬНАЯ СТУДИЯ": "MUSIC STUDIO",
+[05.09.2026 23:31] Кристина: "Музыка начинается с первого шага": "Music begins with the first step",
+        "Научись играть. Выражай себя. Вдохновляй!": "Learn to play. Express yourself. Be inspired!",
+        "Индивидуальные занятия для детей и взрослых.": "Individual lessons for children and adults.",
+        "В студии и ОНЛАЙН": "In the studio and ONLINE",
+        "— независимо от возраста и уровня подготовки.": "— regardless of age or skill level.",
+        "Записаться на занятие": "Book a lesson",
+        "Узнать подробнее": "Learn more",
+
+        "Индивидуальный": "Individual",
+        "подход": "approach",
+        "Удобное": "Flexible",
+        "расписание": "schedule",
+        "Дружеская": "Friendly",
+        "атмосфера": "atmosphere",
+
+        "НАПРАВЛЕНИЯ ОБУЧЕНИЯ": "LEARNING DIRECTIONS",
+        "Выберите свой инструмент": "Choose your instrument",
+        "Начните свой путь в музыке в комфортном темпе.": "Start your musical journey at a comfortable pace.",
+
+        "Фортепиано": "Piano",
+        "Акустическая гитара": "Acoustic guitar",
+        "Электрогитара": "Electric guitar",
+        "Бас-гитара": "Bass guitar",
+        "Ударные": "Drums",
+        "Вокал": "Vocal",
+
+        "Индивидуальные занятия для начинающих и продолжающих. Осваиваем основы игры, технику, ритм и музыкальный слух.":
+        "Individual lessons for beginners and continuing students. We develop playing basics, technique, rhythm and musical ear.",
+
+        "Аккорды, бой, переборы и любимые песни. Подходит как для начинающих, так и для продолжающих.":
+        "Chords, strumming, picking and favorite songs. Suitable for both beginners and continuing students.",
+
+        "Основы игры, риффы, аккорды, соло и простые техники импровизации.":
+        "Playing basics, riffs, chords, solos and simple improvisation techniques.",
+
+        "Основы игры, ритм, техника и понимание роли бас-гитары в музыкальной композиции.":
+        "Playing basics, rhythm, technique and understanding the role of bass guitar in a musical composition.",
+
+        "Развиваем чувство ритма, координацию и постепенно осваиваем основные техники игры.":
+        "We develop rhythm, coordination and gradually master the main playing techniques.",
+
+        "Работаем над голосом, дыханием, музыкальным слухом и уверенностью при исполнении.":
+        "We work on voice, breathing, musical ear and confidence while performing.",
+
+        "О СТУДИИ": "ABOUT THE STUDIO",
+        "Музыка в комфортном темпе": "Music at a comfortable pace",
+
+        "Music House — небольшая музыкальная студия, где проходят индивидуальные занятия по игре на музыкальных инструментах.":
+        "Music House is a small music studio offering individual lessons in playing musical instruments.",
+
+        "Преподаватель помогает ученикам освоить основы игры, разобраться с техникой и постепенно развивать свои музыкальные навыки.":
+        "The teacher helps students master the basics, understand technique and gradually develop their musical skills.",
+
+        "Занятия подходят как для начинающих, которые только знакомятся с инструментом, так и для тех, кто уже имеет небольшой опыт.":
+        "Lessons are suitable for beginners who are just discovering an instrument as well as students with some experience.",
+
+        "Программа подбирается с учётом уровня подготовки и целей ученика.":
+        "The program is tailored to the student's skill level and goals.",
+
+        "ВАШ ПРЕПОДАВАТЕЛЬ": "YOUR TEACHER",
+        "6 лет": "6 years",
+        "опыта преподавания": "of teaching experience",
+        "✦ 6 лет преподавательского опыта": "✦ 6 years of teaching experience",
+
+        "Назар Владимирович проводит индивидуальные занятия для детей и взрослых.":
+        "Nazar Vladimirovich provides individual lessons for children and adults.",
+
+        "На занятиях можно освоить акустическую и электрогитару, бас-гитару, фортепиано и ударные инструменты, а также заниматься вокалом.":
+        "Students can learn acoustic and electric guitar, bass guitar, piano and drums, as well as vocal.",
+[05.09.2026 23:31] Кристина: "Программа занятий подбирается с учётом возраста, уровня подготовки и целей ученика. Основной акцент — на понятной практике, постепенном развитии навыков и комфортном процессе обучения.":
+        "The program is tailored to the student's age, skill level and goals. The main focus is on clear practice, gradual skill development and a comfortable learning process.",
+
+        "Гитара": "Guitar",
+        "Бас-гитара": "Bass guitar",
+        "Фортепиано": "Piano",
+
+        "ДЛЯ НОВЫХ УЧЕНИКОВ": "FOR NEW STUDENTS",
+        "Бонусы для новых учеников": "Bonuses for new students",
+        "Начать знакомство с музыкой стало ещё приятнее.": "Starting your musical journey has become even more enjoyable.",
+        "Скидка на первое занятие": "Discount on the first lesson",
+        "Бесплатное пробное занятие": "Free trial lesson",
+        "Подарки и полезные материалы": "Gifts and useful materials",
+        "Записаться на пробное занятие": "Book a trial lesson",
+
+        "ПРОЦЕСС ОБУЧЕНИЯ": "LEARNING PROCESS",
+        "Как проходят занятия": "How the lessons work",
+        "Знакомство": "Introduction",
+        "Определяем уровень подготовки и обсуждаем цели обучения.": "We determine your skill level and discuss your learning goals.",
+        "Практика": "Practice",
+        "Знакомимся с инструментом и постепенно осваиваем необходимые приёмы игры.": "We get familiar with the instrument and gradually learn the necessary playing techniques.",
+        "Развитие": "Development",
+        "Закрепляем полученные навыки и постепенно усложняем программу занятий.": "We reinforce the skills you have learned and gradually make the program more advanced.",
+
+        "ЗАПИСЬ": "BOOKING",
+        "Начните свой путь в музыке": "Start your musical journey",
+        "Оставьте заявку, и мы свяжемся с вами, чтобы ответить на вопросы и подобрать удобное время занятий.":
+        "Leave a request and we will contact you to answer your questions and find a convenient lesson time.",
+
+        "Ваше имя": "Your name",
+        "Номер телефона": "Phone number",
+        "Выберите направление": "Choose a direction",
+        "Комментарий": "Comment",
+        "Отправить заявку": "Submit request",
+
+        "КОНТАКТЫ": "CONTACTS",
+        "Как нас найти": "How to find us",
+        "Телефон": "Phone",
+        "Адрес": "Address",
+        "Ташкент": "Tashkent",
+        "Юнусабадский район": "Yunusabad district",
+        "ул. Осиё,": "Osiyo St,",
+        "Позвонить": "Call",
+
+        "Музыкальная студия": "Music studio",
+        "Индивидуальные занятия по игре на музыкальных инструментах":
+        "Individual music instrument lessons"
+    }
+};
+
+let currentLanguage = localStorage.getItem("musicHouseLang") || "ru";
+
+function changeLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem("musicHouseLang", lang);
+
+    const dictionary = translations[lang] || {};
+
+    document.documentElement.lang = lang;
+
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT
+    );
+
+    let node;
+
+    while (node = walker.nextNode()) {
+        if (node.parentElement.closest(".language-switcher")) continue;
+
+        if (!node._originalText) {
+            node._originalText = node.nodeValue;
+        }
+
+        const original = node._originalText;
+        const key = original.trim();
+
+        if (dictionary[key]) {
+            node.nodeValue = original.replace(key, dictionary[key]);
+        } else if (lang === "ru") {
+            node.nodeValue = original;
+        }
+    }
+
+    document.querySelectorAll("input[placeholder], textarea[placeholder]").forEach(element => {
+        if (!element.dataset.originalPlaceholder) {
+            element.dataset.originalPlaceholder = element.placeholder;
+        }
+
+        const original = element.dataset.originalPlaceholder;
+        element.placeholder = dictionary[original] || original;
+    });
+
+    document.querySelectorAll("option").forEach(option => {
+        if (!option.dataset.originalText) {
+            option.dataset.originalText = option.textContent;
+        }
+[05.09.2026 23:31] Кристина: const original = option.dataset.originalText.trim();
+        option.textContent = dictionary[original] || original;
+    });
+
+    if (lang === "ru") {
+        document.title = "Music House — Музыкальная студия";
+    } else if (lang === "uz") {
+        document.title = "Music House — Musiqa studiyasi";
+    } else {
+        document.title = "Music House — Music Studio";
+    }
+}
+
+const languageSelect = document.querySelector(".language-switcher select");
+
+if (languageSelect) {
+    languageSelect.value = currentLanguage;
+
+    languageSelect.addEventListener("change", function () {
+        changeLanguage(this.value);
+    });
+
+    changeLanguage(currentLanguage);
+}
+
+// Перевод сообщения после отправки формы
+function sendForm(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name")?.value || "";
+    const phone = document.getElementById("phone")?.value || "";
+    const direction = document.getElementById("direction")?.value || "";
+
+    if (currentLanguage === "uz") {
+        alert(
+            "Rahmat, " + name +
+            "! «" + direction +
+            "» yo‘nalishi bo‘yicha arizangiz qabul qilindi. " +
+            "Biz siz bilan " + phone + " raqami orqali bog‘lanamiz."
+        );
+    } else if (currentLanguage === "en") {
+        alert(
+            "Thank you, " + name +
+            "! Your request for " + direction +
+            " has been received. We will contact you at " + phone + "."
+        );
+    } else {
+        alert(
+            "Спасибо, " + name +
+            "! Заявка на направление «" + direction +
+            "» принята. Мы свяжемся с вами по номеру " + phone + "."
+        );
+    }
+
+    event.target.reset();
+}
 </script>
 </body>
 </html>
