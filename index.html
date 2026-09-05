@@ -732,7 +732,7 @@ function changeLanguage(lang) {
         if (!option.dataset.originalText) {
             option.dataset.originalText = option.textContent;
         }
-[05.09.2026 23:31] Кристина: const original = option.dataset.originalText.trim();
+const original = option.dataset.originalText.trim();
         option.textContent = dictionary[original] || original;
     });
 
