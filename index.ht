@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music House — Музыкальная студия</title>
+
+    <meta name="description"
+          content="Music House — музыкальная студия в Ташкенте. Индивидуальные занятия по гитаре, фортепиано, ударным и вокалу.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* ========================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f6f2ea;
+    color: #171411;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* ========================================
+   ШАПКА
+======================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(10, 9, 8, 0.92);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(216, 173, 104, 0.15);
+}
+
+.header-inner {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    width: 88px;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.navigation a {
+    color: #fff;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #d9ad68;
+}
+
+.header-phone {
+    color: #dcb273;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.header-button {
+    background: linear-gradient(135deg, #f0ce91, #b88747);
+    color: #17120d;
+
+    padding: 13px 23px;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   ГЛАВНЫЙ ЭКРАН
+======================================== */
+
+.hero {
+    min-height: 820px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,6,5,.97) 0%,
+            rgba(7,6,5,.85) 42%,
+            rgba(7,6,5,.30) 100%
+        ),
+        url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=2000&q=85")
+        center / cover;
+}
+
+.hero-content {
+    padding-top: 80px;
+}
+
+.hero-text {
+    max-width: 650px;
+    color: #fff;
+}
+
+.hero-label {
+    color: #dcb273;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 1.02;
+    font-weight: 600;
+}
+
+.hero h1 span {
+    display: block;
+    color: #dfb876;
+}
+
+.hero-slogan {
+    margin-top: 25px;
+
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.hero-description {
+    margin-top: 15px;
+
+    max-width: 580px;
+
+    color: #d5d3d0;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.gold-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(135deg, #f1d092, #b98543);
+
+    color: #17120d;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.gold-button:hover {
+    transform: translateY(-3px);
+}
+
+.outline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    border: 1px solid #d6aa64;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+.outline-button:hover {
+    background: rgba(216,173,104,.15);
+}
+
+.advantages {
+    display: flex;
+    gap: 40px;
+
+    margin-top: 55px;
+}
+
+.advantage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.advantage-icon {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #c89a53;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    color: #dcb273;
+    font-size: 18px;
+}
+
+.advantage p {
+    color: #ddd;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   ОБЩИЕ СЕКЦИИ
+======================================== */
+
+section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-label {
+    color: #ae7c3b;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2,
+.about-text h2,
+.teacher-text h2,
+.contact-text h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 55px);
+
+    line-height: 1.1;
+}
+
+.section-heading p {
+    color: #777;
+    margin-top: 15px;
+}
+
+
+/* ========================================
+   НАПРАВЛЕНИЯ
+======================================== */
+
+.directions {
+    background: #f6f2ea;
+}
+
+.instrument-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.instrument-card {
+    background: #fff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.06);
+
+    transition: .4s;
+}
+
+.instrument-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(0,0,0,.13);
+}
+
+.instrument-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.instrument-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.instrument-card:hover img {
+    transform: scale(1.06);
+}
+
+.instrument-content {
+    padding: 25px;
+}
+
+.instrument-content h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.instrument-content p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    min-height: 95px;
+
+    margin-bottom: 20px;
+}
+
+.instrument-content a {
+    color: #a67435;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   О СТУДИИ
+======================================== */
+
+.about {
+    background: #12100e;
+    color: white;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+
+    border-radius: 15px;
+}
+
+.about-text p {
+    color: #c7c4bf;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+    margin-top: 18px;
+}
+
+
+/* ========================================
+   ПРЕПОДАВАТЕЛЬ
+======================================== */
+
+.teacher {
+    background: #fff;
+}
+
+.teacher-grid {
+    display: grid;
+
+    grid-template-columns: 400px 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.teacher-photo img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.teacher-text p {
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+    margin-top: 18px;
+}
+
+.experience {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 9px 17px;
+
+    border: 1px solid #c69654;
+
+    border-radius: 30px;
+
+    color: #9b6b30;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   БОНУСЫ
+======================================== */
+
+.bonuses {
+    background: #f6f2ea;
+}
+
+.bonus-box {
+    background:
+        radial-gradient(
+            circle at 90% 50%,
+            rgba(215,170,95,.18),
+            transparent 35%
+        ),
+        #12100e;
+
+    border-radius: 20px;
+
+    padding: 55px;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr auto;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+.bonus-label {
+    color: #d9ae69;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.bonus-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+}
+
+.bonus-title p {
+    color: #aaa;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+}
+
+.bonus-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.bonus-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.bonus-item span {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #b9894b;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    color: #dcb273;
+}
+
+.bonus-item p {
+    font-size: 13px;
+}
+
+
+/* ========================================
+   КАК ПРОХОДЯТ ЗАНЯТИЯ
+======================================== */
+
+.process {
+    background: #fff;
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.process-item {
+    border-top: 1px solid #caa46d;
+
+    padding-top: 25px;
+}
+
+.process-number {
+    color: #ae7b3b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.process-item h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin: 15px 0 10px;
+}
+
+.process-item p {
+    color: #777;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   ФОРМА
+======================================== */
+
+.contact-section {
+    background: #151310;
+
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: .8fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.contact-text p {
+    color: #bbb;
+
+    line-height: 1.8;
+
+    margin-top: 20px;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: 1px solid #3c3833;
+
+    border-radius: 8px;
+
+    background: #211f1b;
+
+    color: white;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #c89a56;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   КОНТАКТЫ
+======================================== */
+
+.contacts {
+    background: #f6f2ea;
+}
+
+.contacts-grid {
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: stretch;
+}
+
+.contact-detail {
+    display: flex;
+
+    gap: 18px;
+
+    margin: 30px 0;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid #c59655;
+
+    display: grid;
+    place-items: center;
+
+    color: #ae7836;
+}
+
+.contact-detail small {
+    color: #999;
+
+    font-size: 11px;
+}
+
+.contact-detail a {
+    display: block;
+
+    color: #222;
+
+    font-weight: 600;
+
+    margin-top: 5px;
+}
+
+.contact-detail p {
+    line-height: 1.6;
+
+    margin-top: 5px;
+}
+
+.map {
+    min-height: 430px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.08);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+
+    min-height: 430px;
+
+    border: 0;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #0b0a09;
+
+    color: white;
+
+    padding: 35px 0;
+}
+
+.footer-inner {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.footer-logo img {
+    width: 90px;
+}
+
+.footer-text {
+    color: #999;
+
+    font-size: 12px;
+}
+
+.footer-phone a {
+    color: #d9ad68;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   АДАПТАЦИЯ ДЛЯ ПЛАНШЕТА
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .navigation {
+        display: none;
+    }
+
+    .header-phone {
+        margin-left: auto;
+    }
+
+    .instrument-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .teacher-grid,
+    .contact-grid,
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bonus-box {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-photo {
+        max-width: 450px;
+    }
+}
+
+
+/* ========================================
+   МОБИЛЬНЫЙ ТЕЛЕФОН
+======================================== */
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 70px 0;
+    }
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .gold-button,
+    .outline-button {
+        width: 100%;
+    }
+
+    .advantages {
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .instrument-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bonus-box {
+        padding: 35px 25px;
+    }
+
+    .bonus-title h2 {
+        font-size: 32px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .header-inner {
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 75px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     ШАПКА
+======================================== -->
+
+<header>
+
+<div class="container header-inner">
+
+    <a href="#home" class="logo">
+
+        <img src="images/music-house-logo.png"
+             alt="Music House">
+
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="#home">Главная</a>
+
+        <a href="#directions">Направления</a>
+
+        <a href="#about">О студии</a>
+
+        <a href="#teacher">Преподаватель</a>
+
+        <a href="#bonuses">Бонусы</a>
+
+        <a href="#contacts">Контакты</a>
+
+    </nav>
+
+
+    <a class="header-phone"
+       href="tel:+998200168199">
+
+        +998 20 016 81 99
+
+    </a>
+
+
+    <a href="#contact-form"
+       class="header-button">
+
+        Записаться
+
+    </a>
+
+</div>
+
+</header>
+
+
+
+<!-- ========================================
+     ГЛАВНЫЙ ЭКРАН
+======================================== -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+    <div class="hero-label">
+        МУЗЫКАЛЬНАЯ СТУДИЯ
+    </div>
+
+
+    <h1>
+
+        Музыка начинается
+
+        <span>
+            с первого шага
+        </span>
+
+    </h1>
+
+
+    <div class="hero-slogan">
+
+        Научись играть. Выражай себя. Вдохновляй!
+
+    </div>
+
+
+    <p class="hero-description">
+
+        Индивидуальные занятия по игре на музыкальных
+        инструментах для детей и взрослых,
+        независимо от возраста и уровня подготовки.
+
+    </p>
+
+
+    <div class="buttons">
+
+        <a href="#contact-form"
+           class="gold-button">
+
+            Записаться на занятие
+
+            <span>→</span>
+
+        </a>
+
+
+        <a href="#about"
+           class="outline-button">
+
+            Узнать подробнее
+
+        </a>
+
+    </div>
+
+
+    <div class="advantages">
+
+
+        <div class="advantage">
+
+            <div class="advantage-icon">
+                ★
+            </div>
+
+            <p>
+                Индивидуальный<br>
+                подход
+            </p>
+
+        </div>
+
+
+        <div class="advantage">
+
+            <div class="advantage-icon">
+                ◷
+            </div>
+
+            <p>
+                Удобное<br>
+                расписание
+            </p>
+
+        </div>
+
+
+        <div class="advantage">
+
+            <div class="advantage-icon">
+                ♫
+            </div>
+
+            <p>
+                Дружеская<br>
+                атмосфера
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     НАПРАВЛЕНИЯ
+======================================== -->
+
+<section class="directions" id="directions">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+    <div class="section-label">
+        НАПРАВЛЕНИЯ ОБУЧЕНИЯ
+    </div>
+
+    <h2>
+        Выберите свой инструмент
+    </h2>
+
+    <p>
+        Начните свой путь в музыке в комфортном темпе.
+    </p>
+
+</div>
+
+
+
+<div class="instrument-grid">
+
+
+<!-- ФОРТЕПИАНО -->
+
+<article class="instrument-card">
+
+    <div class="instrument-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=900&q=85"
+        alt="Фортепиано">
+
+    </div>
+
+
+    <div class="instrument-content">
+
+        <h3>
+            Фортепиано
+        </h3>
+
+        <p>
+
+            Индивидуальные занятия для начинающих
+            и продолжающих. Осваиваем основы игры,
+            технику, ритм и музыкальный слух.
+
+        </p>
+
+        <a href="#contact-form">
+            Записаться →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- АКУСТИЧЕСКАЯ ГИТАРА -->
+
+<article class="instrument-card">
+
+    <div class="instrument-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=900&q=85"
+        alt="Акустическая гитара">
+
+    </div>
+
+
+    <div class="instrument-content">
+
+        <h3>
+            Акустическая гитара
+        </h3>
+
+        <p>
+
+            Аккорды, бой, переборы и любимые песни.
+            Подходит как для начинающих,
+            так и для продолжающих.
+
+        </p>
+
+        <a href="#contact-form">
+            Записаться →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- ЭЛЕКТРОГИТАРА -->
+
+<article class="instrument-card">
+
+    <div class="instrument-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?auto=format&fit=crop&w=900&q=85"
+        alt="Электрогитара">
+
+    </div>
+
+
+    <div class="instrument-content">
+
+        <h3>
+            Электрогитара
+        </h3>
+
+        <p>
+
+            Основы игры, риффы, аккорды,
+            соло и простые техники импровизации.
+
+        </p>
+
+        <a href="#contact-form">
+            Записаться →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- БАС -->
+
+<article class="instrument-card">
+
+    <div class="instrument-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=900&q=85"
+        alt="Бас-гитара">
+
+    </div>
+
+
+    <div class="instrument-content">
+
+        <h3>
+            Бас-гитара
+        </h3>
+
+        <p>
+
+            Основы игры, ритм, техника и понимание
+            роли бас-гитары в музыкальной композиции.
+
+        </p>
+
+        <a href="#contact-form">
+            Записаться →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- УДАРНЫЕ -->
+
+<article class="instrument-card">
+
+    <div class="instrument-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1543443258-3e9c9a3a6d4a?auto=format&fit=crop&w=900&q=85"
+        alt="Ударные">
+
+    </div>
+
+
+    <div class="instrument-content">
+
+        <h3>
+            Ударные
+        </h3>
+
+        <p>
+
+            Развиваем чувство ритма, координацию
+            и постепенно осваиваем основные
+            техники игры.
+
+        </p>
+
+        <a href="#contact-form">
+            Записаться →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- ВОКАЛ -->
+
+<article class="instrument-card">
+
+    <div class="instrument-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85"
+        alt="Вокал">
+
+    </div>
+
+
+    <div class="instrument-content">
+
+        <h3>
+            Вокал
+        </h3>
+
+        <p>
+
+            Работаем над голосом, дыханием,
+            музыкальным слухом и уверенностью
+            при исполнении.
+
+        </p>
+
+        <a href="#contact-form">
+            Записаться →
+        </a>
+
+    </div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     О СТУДИИ
+======================================== -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+
+<div class="about-image">
+
+    <img
+    src="https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=1000&q=85"
+    alt="Музыкальная студия">
+
+</div>
+
+
+<div class="about-text">
+
+    <div class="section-label">
+        О СТУДИИ
+    </div>
+
+
+    <h2>
+        Музыка в комфортном темпе
+    </h2>
+
+
+    <p>
+
+        Music House — небольшая музыкальная студия,
+        где проходят индивидуальные занятия по игре
+        на музыкальных инструментах.
+
+    </p>
+
+
+    <p>
+
+        Преподаватель помогает ученикам освоить основы
+        игры, разобраться с техникой и постепенно
+        развивать свои музыкальные навыки.
+
+    </p>
+
+
+    <p>
+
+        Занятия подходят как для начинающих,
+        которые только знакомятся с инструментом,
+        так и для тех, кто уже имеет небольшой опыт.
+
+    </p>
+
+
+    <p>
+
+        Программа подбирается с учётом уровня подготовки
+        и целей ученика.
+
+    </p>
+
+
+    <p>
+
+        Главное — заниматься в комфортном темпе,
+        постепенно приобретая уверенность
+        и удовольствие от игры.
+
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     ПРЕПОДАВАТЕЛЬ
+======================================== -->
+
+<section class="teacher" id="teacher">
+
+<div class="container teacher-grid">
+
+
+<div class="teacher-photo">
+
+    <img
+    src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=900&q=85"
+    alt="Преподаватель">
+
+</div>
+
+
+
+<div class="teacher-text">
+
+    <div class="section-label">
+        ВАШ ПРЕПОДАВАТЕЛЬ
+    </div>
+
+
+    <h2>
+        Щипцов Назар Владимирович
+    </h2>
+
+
+    <div class="experience">
+        5–6 лет преподавательского опыта
+    </div>
+
+
+    <p>
+
+        Назар Владимирович проводит индивидуальные
+        занятия для детей и взрослых.
+
+    </p>
+
+
+    <p>
+
+        На занятиях можно освоить игру на акустической
+        гитаре, бас-гитаре, электрогитаре, фортепиано
+        и ударных инструментах, а также заниматься вокалом.
+
+    </p>
+
+
+    <p>
+
+        Программа занятий подбирается с учётом возраста,
+        уровня подготовки и целей ученика.
+
+    </p>
+
+
+    <p>
+
+        Основной акцент — на понятной практике,
+        постепенном развитии навыков и комфортном
+        процессе обучения.
+
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     БОНУСЫ
+======================================== -->
+
+<section class="bonuses" id="bonuses">
+
+<div class="container">
+
+
+<div class="bonus-box">
+
+
+<div class="bonus-title">
+
+    <div class="bonus-label">
+        ДЛЯ НОВЫХ УЧЕНИКОВ
+    </div>
+
+    <h2>
+        Бонусы для новых учеников
+    </h2>
+
+    <p>
+        Начать знакомство с музыкой стало ещё приятнее.
+    </p>
+
+</div>
+
+
+
+<div class="bonus-list">
+
+
+    <div class="bonus-item">
+
+        <span>★</span>
+
+        <p>
+            Скидка на первое занятие
+        </p>
+
+    </div>
+
+
+    <div class="bonus-item">
+
+        <span>♫</span>
+
+        <p>
+            Бесплатное пробное занятие
+        </p>
+
+    </div>
+
+
+    <div class="bonus-item">
+
+        <span>✦</span>
+
+        <p>
+            Подарки и полезные материалы
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<a href="#contact-form"
+   class="gold-button">
+
+    Записаться на пробное занятие
+
+    <span>→</span>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     КАК ПРОХОДЯТ ЗАНЯТИЯ
+======================================== -->
+
+<section class="process">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+    <div class="section-label">
+        ПРОЦЕСС ОБУЧЕНИЯ
+    </div>
+
+    <h2>
+        Как проходят занятия
+    </h2>
+
+</div>
+
+
+
+<div class="process-grid">
+
+
+<div class="process-item">
+
+    <div class="process-number">
+        01
+    </div>
+
+    <h3>
+        Знакомство
+    </h3>
+
+    <p>
+        Определяем уровень подготовки
+        и обсуждаем цели обучения.
+    </p>
+
+</div>
+
+
+
+<div class="process-item">
+
+    <div class="process-number">
+        02
+    </div>
+
+    <h3>
+        Практика
+    </h3>
+
+    <p>
+        Знакомимся с инструментом и постепенно
+        осваиваем необходимые приёмы игры.
+    </p>
+
+</div>
+
+
+
+<div class="process-item">
+
+    <div class="process-number">
+        03
+    </div>
+
+    <h3>
+        Развитие
+    </h3>
+
+    <p>
+        Закрепляем полученные навыки и постепенно
+        усложняем программу занятий.
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     ФОРМА
+======================================== -->
+
+<section class="contact-section" id="contact-form">
+
+<div class="container contact-grid">
+
+
+<div class="contact-text">
+
+    <div class="section-label">
+        ЗАПИСЬ
+    </div>
+
+
+    <h2>
+        Начните свой путь
+        в музыке
+    </h2>
+
+
+    <p>
+
+        Оставьте заявку, и мы свяжемся с вами,
+        чтобы ответить на вопросы и подобрать
+        удобное время занятий.
+
+    </p>
+
+</div>
+
+
+
+<form class="contact-form"
+      onsubmit="sendForm(event)">
+
+
+    <input
+        type="text"
+        placeholder="Ваше имя"
+        required>
+
+
+    <input
+        type="tel"
+        placeholder="Номер телефона"
+        required>
+
+
+    <select required>
+
+        <option value="">
+            Выберите направление
+        </option>
+
+        <option>
+            Фортепиано
+        </option>
+
+        <option>
+            Акустическая гитара
+        </option>
+
+        <option>
+            Электрогитара
+        </option>
+
+        <option>
+            Бас-гитара
+        </option>
+
+        <option>
+            Ударные
+        </option>
+
+        <option>
+            Вокал
+        </option>
+
+    </select>
+
+
+    <textarea
+        placeholder="Комментарий">
+    </textarea>
+
+
+    <button
+        type="submit"
+        class="gold-button">
+
+        Отправить заявку
+
+        <span>→</span>
+
+    </button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     КОНТАКТЫ
+======================================== -->
+
+<section class="contacts" id="contacts">
+
+<div class="container contacts-grid">
+
+
+<div>
+
+    <div class="section-label">
+        КОНТАКТЫ
+    </div>
+
+
+    <h2 class="contact-text">
+        Как нас найти
+    </h2>
+
+
+
+    <div class="contact-detail">
+
+        <div class="contact-icon">
+            ☎
+        </div>
+
+        <div>
+
+            <small>
+                Телефон
+            </small>
+
+            <a href="tel:+998200168199">
+                +998 20 016 81 99
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="contact-detail">
+
+        <div class="contact-icon">
+            ⌖
+        </div>
+
+        <div>
+
+            <small>
+                Адрес
+            </small>
+
+            <p>
+
+                100084, Ташкент,<br>
+                Юнусабадский район,<br>
+                ул. Осиё, 40
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <a href="tel:+998200168199"
+       class="gold-button">
+
+        Позвонить
+
+        <span>→</span>
+
+    </a>
+
+</div>
+
+
+
+<div class="map">
+
+    <iframe
+        src="https://www.google.com/maps?q=100084,+Ташкент,+Юнусабадский+район,+ул.+Осиё,+40&output=embed"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+<div class="container footer-inner">
+
+
+<div class="footer-logo">
+
+    <img
+    src="images/music-house-logo.png"
+    alt="Music House">
+
+</div>
+
+
+<div class="footer-text">
+
+    Музыкальная студия<br>
+    Индивидуальные занятия по игре
+    на музыкальных инструментах
+
+</div>
+
+
+<div class="footer-phone">
+
+    <a href="tel:+998200168199">
+        +998 20 016 81 99
+    </a>
+
+</div>
+
+
+<div class="footer-text">
+
+    © 2026 Music House
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* ========================================
+   ФОРМА
+======================================== */
+
+function sendForm(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Спасибо за заявку! " +
+        "Мы свяжемся с вами в ближайшее время."
+    );
+
+    event.target.reset();
+
+}
+
+
+/* ========================================
+   ПЛАВНАЯ НАВИГАЦИЯ
+======================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function(event) {
+
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
