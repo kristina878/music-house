@@ -72,10 +72,23 @@
     color: #d9b56d;
     margin-bottom: 8px;
     line-height: 1;}
-    .online-text {
-    color: #e3bf83;
-    font-weight: 700;
-    letter-spacing: 1px;
+    .online-highlight {
+    display: block;
+    width: fit-content;
+    margin: 14px 0 10px;
+    padding: 10px 20px;
+    color: #17130d;
+    background: linear-gradient(135deg, #f3d38d, #c99b4d);
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    box-shadow: 0 5px 20px rgba(217,181,109,.25);
+}
+
+.hero-subtext {
+    display: block;
+    margin-top: 6px;
 }
 :root{
     --ink:#171411;
@@ -298,6 +311,84 @@ footer{background:#0b0a09;color:#fff;padding:32px 0}
     .header-inner{justify-content:center}
     .logo img{width:95px}
     .header-button{display:none}
+    .hero {
+    min-height: auto;
+    padding: 55px 20px 45px;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-brand {
+    font-size: 42px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.05;
+    margin: 18px 0;
+}
+
+.hero-slogan {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.online-highlight {
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 9px 14px;
+    margin: 12px 0 10px;
+}
+
+.hero-subtext {
+    font-size: 15px;
+}
+
+.buttons {
+    margin-top: 24px;
+}
+
+.gold-button {
+    width: 100%;
+    min-height: 58px;
+    font-size: 16px;
+}
+
+.advantages {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.advantage {
+    text-align: center;
+}
+
+.advantage-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 10px;
+}
+
+.advantage p {
+    font-size: 11px;
+    line-height: 1.3;
+}
 }
     /* ===== МОБИЛЬНОЕ МЕНЮ ===== */
 
@@ -523,10 +614,13 @@ footer{background:#0b0a09;color:#fff;padding:32px 0}
 <div class="hero-brand">MUSIC HOUSE</div><div class="eyebrow">МУЗЫКАЛЬНАЯ СТУДИЯ</div>
 <h1>Музыка начинается <span>с первого шага</span></h1>
 <div class="hero-slogan">Научись играть. Выражай себя. Вдохновляй!</div>
-<p class="hero-description">Индивидуальные занятия для детей и взрослых.<br><span class="online-text">В студии и ОНЛАЙН</span> — независимо от возраста и уровня подготовки.</p>
+<p class="hero-description">Индивидуальные занятия для детей и взрослых.<br><span class=<p class="hero-description">
+    Индивидуальные занятия для детей и взрослых.
+    <span class="online-highlight">🎓 В СТУДИИ И ОНЛАЙН 💻</span>
+    <span class="hero-subtext">Независимо от возраста и уровня подготовки.</span>
+</p>
 <div class="buttons">
-<a href="#contact-form" class="gold-button">Записаться на занятие <span>→</span></a>
-<a href="#about" class="outline-button">Узнать подробнее</a>
+<a href="#bonuses" class="gold-button">Узнать о бонусах <span>→</span></a>
 </div>
 <div class="advantages">
 <div class="advantage"><div class="advantage-icon">★</div><p>Индивидуальный<br>подход</p></div>
