@@ -597,6 +597,14 @@ footer{background:#0b0a09;color:#fff;padding:32px 0}
     object-fit: cover;
     display: block;
 }  
+.teacher-photo {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.teacher-card:hover .teacher-photo {
+    transform: scale(1.04);
+    box-shadow: 0 15px 35px rgba(217, 181, 109, 0.25);
+}
 /* Анимация появления блоков */
 @keyframes fadeUp {
     from {
@@ -668,6 +676,39 @@ footer{background:#0b0a09;color:#fff;padding:32px 0}
 .contact-section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+.gold-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.gold-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255,255,255,0.45),
+        transparent
+    );
+    transform: skewX(-20deg);
+    animation: buttonShine 3.5s infinite;
+}
+
+@keyframes buttonShine {
+    0% {
+        left: -80%;
+    }
+    35% {
+        left: 130%;
+    }
+    100% {
+        left: 130%;
+    }
 }
 </style>
 </head>
