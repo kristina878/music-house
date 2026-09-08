@@ -710,6 +710,25 @@ footer{background:#0b0a09;color:#fff;padding:32px 0}
         left: 130%;
     }
 }
+  /* Анимация появления при прокрутке */
+.directions,
+.about,
+.teacher,
+.bonuses,
+.contact-section {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.directions.visible,
+.about.visible,
+.teacher.visible,
+.bonuses.visible,
+.contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}  
 </style>
 </head>
 
@@ -1372,5 +1391,27 @@ animatedSections.forEach(function(section) {
     observer.observe(section);
 });
 </script>
+   <script>
+const animatedSections = document.querySelectorAll(
+    ".directions, .about, .teacher, .bonuses, .contact-section"
+);
+
+const observer = new IntersectionObserver(
+    function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
+            }
+        });
+    },
+    { threshold: 0.15 }
+);
+
+animatedSections.forEach(function(section) {
+    observer.observe(section);
+});
+</script> 
 </body>
 </html>
