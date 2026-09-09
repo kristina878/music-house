@@ -1445,5 +1445,27 @@ animatedSections.forEach(function(section) {
     observer.observe(section);
 });
 </script>
+<script>
+const heroPhotos = [
+    "фото барабан.jpg",
+    "фото гитара.jpg",
+    "фото фортепяно.jpg",
+    "hero4.jpg",
+    "hero5.jpg"
+];
+ function changeHeroPhoto() {
+    heroIndex = (heroIndex + 1) % heroPhotos.length;
+
+    hero.style.backgroundImage =
+        `linear-gradient(90deg, rgba(7,6,5,.97) 0%, rgba(7,6,5,.84) 43%, rgba(7,6,5,.25) 100%),
+        url("${heroPhotos[heroIndex]}")`;
+}
+
+hero.style.backgroundImage =
+    `linear-gradient(90deg, rgba(7,6,5,.97) 0%, rgba(7,6,5,.84) 43%, rgba(7,6,5,.25) 100%),
+    url("${heroPhotos[0]}")`;
+
+setInterval(changeHeroPhoto, 5000);
+</script>   
 </body>
 </html>
