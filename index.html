@@ -974,6 +974,7 @@ footer{background:#0b0a09;color:#fff;padding:32px 0}
 <form class="contact-form" onsubmit="sendForm(event)">
 <input id="name" type="text" placeholder="Ваше имя" required>
 <input id="phone" type="tel" placeholder="Номер телефона" required>
+ <input id="email" type="email" placeholder="Ваш e-mail">   
 <select id="direction" required>
 <option value="">Выберите направление</option>
 <option>Фортепиано</option><option>Акустическая гитара</option><option>Электрогитара</option>
@@ -1014,12 +1015,14 @@ function sendForm(event) {
     const form = event.target;
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
     const direction = document.getElementById("direction").value;
     const comment = document.getElementById("comment").value.trim();
 
     const data = new URLSearchParams();
     data.append("name", name);
     data.append("phone", phone);
+    data.append("email", email);
     data.append("direction", direction);
     data.append("comment", comment);
 
