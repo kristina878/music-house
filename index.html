@@ -1388,38 +1388,6 @@ if (languageSelect) {
 
     changeLanguage(currentLanguage);
 }
-
-// Перевод сообщения после отправки формы
-function sendForm(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name")?.value || "";
-    const phone = document.getElementById("phone")?.value || "";
-    const direction = document.getElementById("direction")?.value || "";
-
-    if (currentLanguage === "uz") {
-        alert(
-            "Rahmat, " + name +
-            "! «" + direction +
-            "» yo‘nalishi bo‘yicha arizangiz qabul qilindi. " +
-            "Biz siz bilan " + phone + " raqami orqali bog‘lanamiz."
-        );
-    } else if (currentLanguage === "en") {
-        alert(
-            "Thank you, " + name +
-            "! Your request for " + direction +
-            " has been received. We will contact you at " + phone + "."
-        );
-    } else {
-        alert(
-            "Спасибо, " + name +
-            "! Заявка на направление «" + direction +
-            "» принята. Мы свяжемся с вами по номеру " + phone + "."
-        );
-    }
-
-    event.target.reset();
-}
     const menuToggle = document.getElementById("menuToggle");
 const menuOverlay = document.getElementById("menuOverlay");
 const menuClose = document.getElementById("menuClose");
