@@ -1008,13 +1008,39 @@ footer{background:#0b0a09;color:#fff;padding:32px 0}
 </footer>
 
 <script>
-function sendForm(event){
+function sendForm(event) {
     event.preventDefault();
-    const name=document.getElementById("name").value.trim();
-    const phone=document.getElementById("phone").value.trim();
-    const direction=document.getElementById("direction").value;
-    alert("Спасибо, "+name+"! Заявка на направление «"+direction+"» принята. Мы свяжемся с вами по номеру "+phone+".");
-    event.target.reset();
+
+    const form = event.target;
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const direction = document.getElementById("direction").value;
+    const comment = document.getElementById("comment").value.trim();
+
+    const data = new URLSearchParams();
+    data.append("name", name);
+    data.append("phone", phone);
+    data.append("direction", direction);
+    data.append("comment", comment);
+
+    fetch("https://formspree.io/f/xyeylevn", {
+        method: "POST",
+        body: data,
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Спасибо, " + name + "! Заявка отправлена. Мы свяжемся с вами.");
+            form.reset();
+        } else {
+            alert("Не удалось отправить заявку. Попробуйте ещё раз.");
+        }
+    })
+    .catch(() => {
+        alert("Ошибка соединения. Попробуйте ещё раз.");
+    });
 }
 document.querySelectorAll('a[href^="#"]').forEach(link=>{
     link.addEventListener("click",function(event){
